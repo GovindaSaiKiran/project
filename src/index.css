@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=JetBrains+Mono:wght@400;500;600&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #c5a059;
+  --color-primary-container: #ece7de;
+  --color-secondary: #1a1a1a;
+  --color-surface: #fdfcf8;
+  --color-on-surface: #1a1a1a;
+  --color-on-surface-variant: #555555;
+  --color-outline: #e5e1d8;
+  --color-outline-variant: #ece7de;
+  --color-background-warm: #faf7f2;
+  --font-serif: "Playfair Display", serif;
+  --font-sans: "Inter", sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+}
+
+/* Custom transitions and helper styles matching Quiet Luxury mood */
+@layer utilities {
+  .glass-panel {
+    background: rgba(252, 249, 248, 0.75);
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+    border: 1px solid rgba(197, 160, 89, 0.15);
+  }
+
+  .glass-panel-dark {
+    background: rgba(28, 27, 27, 0.82);
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+    border: 1px solid rgba(197, 160, 89, 0.25);
+  }
+
+  .glass-panel-luxury {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+    border: 1px solid rgba(197, 160, 89, 0.2);
+    box-shadow: 0px 20px 50px rgba(0, 0, 0, 0.2), inset 0 0 20px rgba(255, 255, 255, 0.02);
+  }
+
+  .soft-shadow {
+    box-shadow: 0px 20px 40px rgba(28, 27, 27, 0.03);
+  }
+
+  .cinematic-shadow {
+    box-shadow: 0px 30px 60px rgba(28, 27, 27, 0.12);
+  }
+
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .luxury-gradient {
+    background: linear-gradient(180deg, rgba(28, 27, 27, 0) 0%, rgba(28, 27, 27, 0.6) 60%, rgba(28, 27, 27, 0.95) 100%);
+  }
+
+  .radial-glow {
+    background: radial-gradient(circle at center, rgba(197, 160, 89, 0.15) 0%, transparent 70%);
+  }
+}
+
+/* Page scroll bar custom styling */
+html {
+  scroll-behavior: smooth;
+  background-color: #fdfcf8;
+  color: #1a1a1a;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #faf7f2;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #e5e1d8;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #c5a059;
+}
+
+/* Disable focus ring outline default behaviors and style them nicely */
+input:focus, select:focus, textarea:focus {
+  outline: none !important;
+  box-shadow: none !important;
+}

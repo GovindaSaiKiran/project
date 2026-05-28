@@ -1,0 +1,6 @@
+{
+  "name": "Aryam Resorts Sanctuary",
+  "description": "Premium luxury resort sanctuary web app featuring curated beachfront experiences, bespoke sanctuaries, in-room private dining, an interactive intelligence dashboard, and an AI-powered personal concierge.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
